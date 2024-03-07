@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const proxyOptions = { timeout: 300000 };
 
-const mode = "dev";
+const mode = "prod";
 
 if (mode === "dev") {
   app.use("/message", proxy("http://localhost:8007", proxyOptions));
