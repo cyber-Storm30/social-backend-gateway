@@ -16,7 +16,7 @@ app.use(
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-const proxyOptions = { timeout: 300000 };
+const proxyOptions = { timeout: 600000 };
 
 app.use("/message", proxy("http://localhost:8007", proxyOptions));
 app.use("/chat", proxy("http://localhost:8006", proxyOptions));
